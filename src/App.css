@@ -13,12 +13,13 @@
     }
 }
 
-.customdp {
-    margin-left: 16px;
-    margin-right: 16px;
-    padding: 20px 0px;
-    left: auto;
-    /* added */
+button:focus {
+    outline: none;
+}
+
+.navbar-toggler {
+    padding: 2px;
+    border-radius: 0;
 }
 
 
