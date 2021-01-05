@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, NavDropdown, Nav, Form, FormControl, Button, Card } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
