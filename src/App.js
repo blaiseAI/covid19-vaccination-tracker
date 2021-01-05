@@ -9,12 +9,18 @@ function App() {
     <Router>
       <div>
         <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
-          <Navbar.Brand href='/'>COVID-19 Vaccine Tracker Canada</Navbar.Brand>
+          <Link to='/' className='navbar-brand'>
+            COVID-19 Vaccine Tracker Canada
+          </Link>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='mr-auto'>
-              <Nav.Link href='/about'>About</Nav.Link>
-              <Nav.Link href='/sources'>Sources</Nav.Link>
+              <Link to='/about' className='nav-link'>
+                About
+              </Link>
+              <Link to='/sources' className='nav-link'>
+                Sources
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
