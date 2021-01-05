@@ -1,71 +1,44 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+These steps will get this sample application running for you using DigitalOcean.
 
-## Available Scripts
+**Note: Following these steps will result in charges for the use of DigitalOcean services**
 
-In the project directory, you can run:
+## Requirements
 
-### `yarn start`
+- You need a DigitalOcean account. If you don't already have one, you can sign up at https://cloud.digitalocean.com/registrations/new
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deploying this App to your app platform
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Click this button to deploy the app to the DigitalOcean App Platform.
 
-### `yarn test`
+[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/blaiseAI/covid19-vaccination-tracker/tree/main)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Making Changes to Your App
 
-### `yarn build`
+As long as you left the default Autodeploy option enabled when you first launched this app, you can now make code changes and see them automatically reflected in your live application. During these automatic deployments, your application will never pause or stop serving request because the App Platform offers zero-downtime deployments.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here's an example code change you can make for this app:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Edit [index.html](public/index.html)
+1. Change the `<title>React App</title>` to a different title
+1. Commit the change to master. Normally it's a better practice to create a new branch for your change and then merge that branch to master after review, but for this demo you can commit to master directly.
+1. Visit https://cloud.digitalocean.com/apps and navigate to your sample-react app.
+1. You should see a "Building..." progress indicator, just like above.
+1. Once the build completes successfully, click the "Live App" link in the header and you should see your updated application running (hovering over the live app's tab in your browser should show a new title). You may need to force refresh the page in your browser (e.g. using Shift+Reload).
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more about the App Platform and how to manage and update your application at https://www.digitalocean.com/docs/apps/.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deleting the App
 
-### Code Splitting
+When you no longer need this sample application running live, you can delete it by following these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Visit the Apps control panel at https://cloud.digitalocean.com/apps
+1. Navigate to the sample-react app
+1. Choose "Settings"->"Destroy"
 
-### Analyzing the Bundle Size
+This will delete the app and destroy any underlying DigitalOcean resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# covid19-vaccination-tracker
+**Note: If you don't delete your app, charges for the use of DigitalOcean services will continue to accrue.**
