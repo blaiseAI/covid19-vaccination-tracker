@@ -9,7 +9,7 @@ import Dashboard from './Dashboard';
 import Provinces from './Provinces';
 import { getSummary } from './services/Summary';
 
-const API_URL = 'https://api.covid19tracker.ca/summary';
+const API_URL = 'https://cors-anywhere.herokuapp.com/https://api.covid19tracker.ca/summary';
 // console.log('Last updated ' + getSummary);
 const fetchSummary = async (updateCb) => {
   const res = await fetch(API_URL);
@@ -104,16 +104,6 @@ function App() {
             End of Section III
          */}
         </main>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path='/about'>
-            <About />
-          </Route>
-          <Route path='/sources'>
-            <Sources />
-          </Route>
-        </Switch>
       </div>
     </Router>
   );
