@@ -36,7 +36,7 @@ function App() {
       <div>
         <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
           <Link to='/' className='navbar-brand'>
-            COVID-19 Vaccine Tracker Canada
+            COVID-19 Vaccine Tracker | Canada
           </Link>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
