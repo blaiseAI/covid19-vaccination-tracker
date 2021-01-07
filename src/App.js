@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import './App.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import About from './About';
-import Sources from './Sources';
+// import About from './About';
+// import Sources from './Sources';
 import { Alert, Card, Row, Col } from 'antd';
 import Dashboard from './Dashboard';
 import Provinces from './Provinces';
-import { getSummary } from './services/Summary';
+import Details from './Details';
+// import { getSummary } from './services/Summary';
+import moment from 'moment';
 
 const API_URL = 'https://cors-anywhere.herokuapp.com/https://api.covid19tracker.ca/summary';
 // console.log('Last updated ' + getSummary);
@@ -31,6 +33,7 @@ function App() {
     fetchLastUpdated(setlastUpdated);
     setLoading(false);
   }, []);
+  console.log(typeof lastUpdated);
   return (
     <Router>
       <div>
@@ -53,7 +56,7 @@ function App() {
         <main className='container-fluid'>
           <Alert
             message='Informational Notes'
-            description={`Last updated ${lastUpdated}`}
+            description={`Last updated ${moment(lastUpdated).format('dddd, MMMM Do YYYY, h:mm:ss a')}`}
             type='info'
             showIcon
             className='mt-4'
@@ -76,7 +79,9 @@ function App() {
           <Row gutter={16}>
             <Col span={12} xs={24} sm={24} lg={12} className='mb-4'>
               <Card title='Covid-19 Vaccinations in Canada' bordered={true}>
-                Card content
+                {summarydata.map((summary, index) => (
+                  <Details summary={summary} isLoading={loading} lastUpdated={lastUpdated} key={index} />
+                ))}
               </Card>
             </Col>
             <Col span={12} xs={24} sm={24} lg={12} className='mb-4'>

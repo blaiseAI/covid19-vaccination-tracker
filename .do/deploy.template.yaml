@@ -1,7 +1,7 @@
 spec:
-  name: covid19-vaccination-tracker
+  name: covid-vaccination-tracker
   static_sites:
     - git:
         branch: main
-        repo_clone_url: https://github.com/blaiseAI/covid19-vaccination-tracker.git
-      name: covid19-vaccination-tracker
+        repo_clone_url: https://github.com/blaiseAI/covid-vaccination-tracker.git
+      name: covid-vaccination-tracker

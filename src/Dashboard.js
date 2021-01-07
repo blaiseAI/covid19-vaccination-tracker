@@ -4,7 +4,7 @@ import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 const Dashboard = ({ summary, isLoading }) => {
   return (
     <div>
-      <div className='site-statistic-demo-card my-5'>
+      <div className='site-statistic-demo-card mt-4'>
         <Row gutter={16}>
           <Col xs={24} sm={12} lg={8} className='mb-4'>
             <Card loading={isLoading}>
